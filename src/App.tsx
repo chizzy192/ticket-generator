@@ -1,10 +1,16 @@
 
+import BackgroundImage from "./components/BackgroundImage"
+import TicketDesign from "./pages/ticketdesign/TicketDesign"
+import TicketForm from "./pages/ticketform/TicketForm"
+
 
 function App() {
   return (
-    <div>
-      
-    </div>
+    <>
+        <BackgroundImage/>
+        <TicketForm/>
+        {/* <TicketDesign/> */}
+    </>
   )
 }
 

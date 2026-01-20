@@ -1,0 +1,80 @@
+header {
+    display: flex;
+    place-items: center center;
+    flex-direction: column;
+    margin: clamp(1.5rem, 3%, 3rem) 0 0 0;
+    color: rgb(var(--neutral-0));
+    text-align: center;
+    line-height: normal;
+    gap: clamp(1.5rem, 2%, 2.5rem);
+    /**
+     * CLAMP FUNCTION USAGE:
+     * clamp(MIN, PREFERRED, MAX)
+     * 
+     * - MIN (1rem): Minimum font size that will be applied
+     * - PREFERRED (4vw): Preferred size that scales with viewport width
+     * - MAX (1.5rem): Maximum font size that will not be exceeded
+     * 
+     * HOW IT WORKS:
+     * The browser will use the PREFERRED value (4vw) as long as it stays
+     * between MIN and MAX. If 4vw becomes smaller than 1rem, it uses 1rem.
+     * If 4vw exceeds 1.5rem, it uses 1.5rem instead.
+     * 
+     * EDITING THE MIDDLE VARIABLE (PREFERRED VALUE):
+     * Change '4vw' to adjust responsiveness:
+     * - Increase (e.g., 5vw): Font scales faster with viewport
+     * - Decrease (e.g., 3vw): Font scales slower with viewport
+     * - Use different units: 2%, 5vh, 6cqw, etc.
+     * 
+     * EXAMPLE:
+     * clamp(0.875rem, 5vw, 2rem) - More aggressive scaling
+     * clamp(1.25rem, 3vw, 1.75rem) - More conservative scaling
+     */
+    
+}
+
+.logofull {
+    width: 8rem;
+    height: auto;
+}
+
+h1 {
+    font-size: clamp(1.45rem, 4vw, 2rem);
+    margin: 0;
+}
+
+
+
+.headerText {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 3%, 2rem);
+    place-items: center center;
+}
+
+.header-p {
+    color: rgb(var(--neutral-500));
+    font-weight: 500;
+}
+
+.colored-text {
+    background: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.colored-email {
+    color:hsl(7, 86%, 67%);
+}
+
+@media (min-width: 64rem) {
+    .header-ticket{
+    width: 90%;
+}
+
+.p-ticket {
+    width: 70%;
+}
+}
