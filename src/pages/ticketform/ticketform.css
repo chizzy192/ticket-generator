@@ -1,0 +1,85 @@
+section {
+    display: flex;
+    flex-direction: column;
+    place-items: center center;
+    width: 100vw
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 2%, 2.5rem);
+    width: 100%;
+    max-width: 40rem;
+}
+
+button.submit-btn {
+    width: 100%;
+    padding: 10px 12px;
+    background-image: linear-gradient(
+        to right, rgb(var(--orange-500)), rgb(var(--orange-700))
+    );
+    border-radius: 8px;
+    border: none;
+    font: inherit;
+    font-weight: 700;
+    color: rgb(var(--neutral-900));
+    cursor: pointer;
+}
+
+.background-pattern-circle, .background-pattern-circle2 {
+    
+    width: 120px;
+    height: 120px;
+    z-index: -1;
+}
+
+.background-pattern-circle {
+    top: -35px;
+    left: -20px;
+    position: fixed;
+}
+
+.background-pattern-circle2 {
+    bottom: 200px;
+    right: -60px;
+    position: absolute;
+}
+
+
+
+@media (min-width: 40.625rem) {
+        .background-pattern-circle, .background-pattern-circle2 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .background-pattern-circle {
+        top: -60px;
+        left: 10px;
+    }
+}
+
+@media (min-width: 64rem) {
+    section {
+        width: 70%;
+    }
+
+    form {
+        width: 70%;
+    }
+
+    .background-pattern-circle, .background-pattern-circle2 {
+        width: 180px;
+        height: 180px;
+    }
+
+    .background-pattern-circle {
+        top: -90px;
+        left: 40px;
+    }
+    .background-pattern-circle2 {
+        bottom: 250px;
+        right: 70px;
+    }
+}

@@ -1,0 +1,49 @@
+h2 {
+    color: rgb(var(--neutral-300));
+    font-size: inherit;
+    font-weight: 700;
+    margin: 0;
+}
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid rgb(var(--neutral-700));
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(2px); 
+    backdrop-filter: blur(2px);
+    background-image:linear-gradient(
+        rgba(var(--neutral-700), 0.1)
+    ),
+     linear-gradient(to right, rgba(var(--neutral-700), 0.1) 90%, rgba(var(--orange-500), 0.05));
+    background-origin: border-box;
+    font: inherit;
+    font-size: 1rem;
+    color: rgb(var(--neutral-0));
+    background-color:rgba(var(--neutral-700), 0.1);
+}
+
+input:focus {
+    border: 1px solid rgb(var(--neutral-700));
+    padding: 10px 14px;
+    transition: border 0.3s ease, opacity 0.3s ease;
+    outline-offset: 2.5px;
+    outline: 2px solid rgb(var(--neutral-700));
+}
+
+input:hover {
+    background-color: rgba(var(--neutral-700), 0.4);
+}
+
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+input::placeholder {
+    color: rgb(var(--neutral-300));
+    font-weight: 500;
+}

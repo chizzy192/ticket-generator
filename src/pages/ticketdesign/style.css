@@ -1,0 +1,38 @@
+/* .ticket-img {
+    width: 94%;
+    height: auto;
+    position: relative;
+    margin: clamp(2rem, 4%, 4rem) 0;
+}
+
+@media (min-width: 64rem) {
+    .ticket-img {
+        width: 65%;
+        height: auto;
+    }
+} */
+
+.ticket {
+    background-image: url(../../assets/images/pattern-ticket.svg);
+    width: 94%;
+    height: auto;
+    position: relative;
+    margin: clamp(2rem, 4%, 4rem) 0;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    padding: 1rem;
+}
+
+.logo {
+    display: flex;
+    gap: 0.5rem;
+}
+
+@media (min-width: 64rem) {
+    .ticket {
+        width: 65%;
+        height: auto;
+    }
+}
