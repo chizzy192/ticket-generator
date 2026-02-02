@@ -71,7 +71,7 @@ function TicketForm() {
     };
   
     return (
-    <main>
+    <main className='ticket-form-page'>
         <img src={patternCircle} alt="Pattern Circle" className="background-pattern-circle"/>
         <img src={patternCircle} alt="Pattern Circle" className="background-pattern-circle2"/>
         
