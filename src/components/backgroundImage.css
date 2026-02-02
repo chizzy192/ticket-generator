@@ -1,35 +1,40 @@
-.background-image {
+/* 1. Ensure the container itself doesn't have a height of 0 */
+.background-container {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 100%;
-    background-image: url(../assets/images/background-mobile.png);
-    /* background-position: center; */
+    inset: 0; /* Shorthand for top, bottom, left, right: 0 */
+    z-index: -1;
+    overflow: hidden;
+    background-color: #0b0b14; /* Fallback color to match your neutral-900 */
+}
+
+.background-image {
+    position: absolute; /* Use absolute inside the fixed container */
+    inset: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    object-fit: contain;
-    z-index: -1;
+    background-position: center;
+    /* Removed min-height and object-fit as they don't apply to divs */
+    background-image: url(../assets/images/background-mobile.png);
 }
 
 .background-image-overlay {
-    position: fixed;
+    position: absolute;
+    inset: 0;
     background-image: url(../assets/images/pattern-lines.svg);
-    /* background-position: center; */
     background-repeat: repeat-x;
     background-size: cover;
-    object-fit: contain;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    opacity: 0.4; /* Soften the lines like the design */
 }
 
 
+.pattern-squiggly-line-bottom-mobile,
+.pattern-squiggly-line-bottom-desktop,
+.pattern-squiggly-line-top {
+    pointer-events: none; /* Prevents icons from blocking clicks on the form */
+}
 
 .pattern-squiggly-line-bottom-mobile {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 15rem;
@@ -38,7 +43,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: contain;
-    z-index: -1;
 }
 
 .pattern-squiggly-line-bottom-desktop {
@@ -46,7 +50,7 @@
 }
 
 .pattern-squiggly-line-top {
-    position: fixed;
+    position: absolute;
     top: clamp(1rem, 6%, 3rem);
     right: 0;
     width: clamp(5rem, 24%, 20rem);
@@ -71,15 +75,8 @@
         display: none;
     }
 
-    /* .pattern-squiggly-line-top {
-        position: fixed;
-        top: 2rem;
-        right: 0;
-        width: 20rem;
-    } */
-
     .pattern-squiggly-line-bottom-desktop {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     display: block;
     left: 0;
@@ -89,6 +86,5 @@
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: contain;
-    z-index: -1;
 }
 }
