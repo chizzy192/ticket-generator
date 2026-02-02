@@ -10,8 +10,6 @@
     
 }
 
-
-
 #img-view {
     width: 100%;
     height: auto;
@@ -90,12 +88,10 @@
     display: flex;
     align-items: center;
     gap: 0.25rem;
-
 }
 
-.infoIcon {
-    color: rgb(var(--neutral-700));
-    width: 0.625rem;
+.info svg {
+  width: 0.625rem;
 }
 
 .img-buttons {
@@ -113,6 +109,17 @@
     color: rgb(var(--neutral-500));
     background-color: rgba(var(--neutral-700), 0.3);
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.img-buttons button:hover {
+    background-color: rgba(var(--neutral-700), 0.5);
+    color: rgb(var(--neutral-300));
+}
+
+.img-buttons button:focus {
+    outline: 2px solid rgb(var(--orange-500));
+    outline-offset: 2px;
 }
 
 .img-buttons button:first-child {

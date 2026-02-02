@@ -25,6 +25,18 @@ button.submit-btn {
     font-weight: 700;
     color: rgb(var(--neutral-900));
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button.submit-btn:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+}
+
+button.submit-btn:focus {
+    outline: 3px solid rgb(var(--orange-500));
+    outline-offset: 2px;
 }
 
 .background-pattern-circle, .background-pattern-circle2 {
