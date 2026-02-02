@@ -1,38 +1,187 @@
-/* .ticket-img {
-    width: 94%;
-    height: auto;
-    position: relative;
-    margin: clamp(2rem, 4%, 4rem) 0;
+.ticket-design-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(2rem, 5vh + 2rem, 6rem);
+    margin: 0;
 }
 
-@media (min-width: 64rem) {
-    .ticket-img {
-        width: 65%;
-        height: auto;
-    }
-} */
+.ticket-section {
+  position: relative;
+}
 
-.ticket {
-    background-image: url(../../assets/images/pattern-ticket.svg);
-    width: 94%;
-    height: auto;
-    position: relative;
-    margin: clamp(2rem, 4%, 4rem) 0;
-    /* background-position: center; */
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: contain;
-    padding: 1rem;
+.ticket-container {
+  position: relative;
+  width: clamp(18rem, 70%, 21rem); 
+  height: clamp(18rem, 70%, 21rem);
+  aspect-ratio: 2 / 1; /* Adjust this to match your SVG's shape (e.g., 2.5 / 1) */
+  display: flex;
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.2));
+}
+
+.ticket-img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  /* 1. Masking */
+  -webkit-mask-image: url('../../assets/images/pattern-ticket.svg');
+  mask-image: url('../../assets/images/pattern-ticket.svg');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+
+  /* 2. Glass Effect: Blur needs to be significant to hide background circles */
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
+
+  /* 3. Corrected Gradients for the Design */
+  background-image: 
+    linear-gradient(to left, rgba(var(--orange-500), 0.8), transparent 50%),
+    linear-gradient(135deg, rgba(var(--neutral-0), 0.9), rgba(var(--neutral-0), 0.9));
+  border-radius: inherit; /* Helps the border match the mask if possible */
 }
 
 .logo {
+  position: absolute;
+  display: flex;
+  gap: 0.7rem;
+  align-self: start;
+  justify-content: flex-start;
+  top: 1.2rem;
+  left: 1rem;
+}
+
+.avatar {
+  position:absolute;
+  display: flex;
+  gap: 0.7rem;
+  align-self: start;
+  justify-content: flex-start;
+  bottom: 1.2rem;
+  left: 1rem;
+}
+
+.avatar img {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 6px;
+}
+
+.avatar h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(var(--neutral-0));
+  line-height: 0.8;
+}
+
+.avatar p img {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
+.avatar p {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: rgb(var(--neutral-300));
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+
+}
+
+.avatar figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.logo img {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.logo h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: rgb(var(--neutral-0));
+    line-height: 0.8;
+}
+
+.logo .ticket-date {
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: rgb(var(--neutral-300));
+    line-height: 1;
+}
+
+.logo figcaption {
     display: flex;
-    gap: 0.5rem;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+p.ticket-code {
+    position: absolute;
+    bottom: 0;
+    top: 50%;
+    bottom: 50%;
+    right: -1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: rgb(var(--neutral-500));
+    transform: rotate(90deg);
+    line-height: 1;
+}
+
+.background-pattern-circle-ticket, .background-pattern-circle2-ticket {
+    width: 120px;
+    height: 120px;
+    z-index: -1;
+}
+
+.background-pattern-circle-ticket {
+    top: -35px;
+    left: -20px;
+    position: fixed;
+}
+
+.background-pattern-circle2-ticket {
+    top: 80%;
+    right: -60px;
+    position: absolute;
+}
+
+.background-pattern-circle3-ticket {
+  display: none;
 }
 
 @media (min-width: 64rem) {
     .ticket {
         width: 65%;
         height: auto;
+    }
+
+    .background-pattern-circle-ticket, .background-pattern-circle3-ticket {
+        width: 170px;
+        height: 170px;
+    }
+
+    .background-pattern-circle-ticket {
+        top: -90px;
+        left: 40px;
+    }
+    .background-pattern-circle3-ticket {
+      position: absolute;
+      display: block;
+      top: 7%;
+      left: 71%;
+    }
+
+    .background-pattern-circle2-ticket {
+        display: none;
     }
 }

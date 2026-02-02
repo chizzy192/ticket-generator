@@ -31,6 +31,10 @@ input:focus {
     outline: 2px solid rgb(var(--neutral-700));
 }
 
+input[aria-invalid="true"] {
+    border: 1px solid rgb(var(--orange-500));
+}
+
 input:hover {
     background-color: rgba(var(--neutral-700), 0.4);
 }
@@ -46,4 +50,14 @@ input:hover {
 input::placeholder {
     color: rgb(var(--neutral-300));
     font-weight: 500;
+}
+
+.error-message {
+    margin: 0;
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: rgb(var(--orange-700));
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
 }
