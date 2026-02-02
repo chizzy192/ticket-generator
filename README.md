@@ -6,12 +6,15 @@ This is a solution to the [Conference ticket generator challenge on Frontend Men
 
 - [Overview](#overview)
   - [The Challenge](#the-challenge)
+  - [Screenshots](#screenshots)
+  - [Links](#links)
   - [Features](#features)
 - [My Process](#my-process)
   - [Built With](#built-with)
   - [What I Learned](#what-i-learned)
 - [Installation & Setup](#installation--setup)
 - [Project Structure](#project-structure)
+- [Author](#author)
 
 ## Overview
 
@@ -21,14 +24,33 @@ Users should be able to:
 
 - ✅ Complete the form with their details
 - ✅ Receive form validation messages if:
-  -[x] Any field is missed
-  -[x] The email address is not formatted correctly
-  -[x] The avatar upload is too big or the wrong image format
+  ✅ Any field is missed
+  ✅ The email address is not formatted correctly
+  ✅ The avatar upload is too big or the wrong image format
 - ✅ Complete the form only using their keyboard
 - ✅ Have inputs, form field hints, and error messages announced on their screen reader
 - ✅ See the generated conference ticket when they successfully submit the form
 - ✅ View the optimal layout for the interface depending on their device's screen size
 - ✅ See hover and focus states for all interactive elements on the page
+
+### Screenshots
+
+**Desktop Form Page**
+![Desktop form with upload avatar, full name, email, and GitHub username fields](./public/screenshot-desktop-form.png)
+
+**Mobile Form Page**
+![Mobile responsive form layout](./public/screenshot-mobile-form.jpg)
+
+**Desktop Ticket Page**
+![Desktop conference ticket display with user details and ticket ID](./public/screenshot-desktop-ticket.jpg)
+
+**Mobile Ticket Page**
+![Mobile responsive ticket display](./public/screenshot-mobile-ticket.jpg)
+
+### Links
+
+- Live Site URL: https://ticket-generator-eight-cyan.vercel.app/
+- GitHub Repo: https://github.com/chizzy192/ticket-generator.git
 
 ### Features
 
@@ -182,6 +204,14 @@ src/
 - [ ] User account system
 - [ ] Ticket sharing functionality
 - [ ] Dark mode toggle
+
+---
+
+## Author
+
+- Website - [Chiziterem Eze](https://chiziteremeze.vercel.app/)
+- Frontend Mentor - [@chizzy192](https://www.frontendmentor.io/profile/chizzy192)
+- Twitter - [@ezechiziterem](https://www.twitter.com/ezechiziterem)
 
 ---
 
