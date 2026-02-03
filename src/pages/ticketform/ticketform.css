@@ -1,3 +1,7 @@
+.ticket-form-page {
+  margin-bottom: clamp(2rem, 10%, 6rem);
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -32,13 +36,13 @@ button.submit-btn:focus {
 .background-pattern-circle, .background-pattern-circle2 {
     width: 7.5rem;
     height: 7.5rem;
-    z-index: -1;
 }
 
 .background-pattern-circle {
     top: -2.1875rem;
     left: -1.25rem;
-    position: fixed;
+    position: absolute;
+    z-index: 10;
 }
 
 .background-pattern-circle2 {
@@ -77,10 +81,10 @@ button.submit-btn:focus {
 
     .background-pattern-circle {
         top: -5.625rem;
-        left: 2.5rem;
+        left: -15rem;
     }
     .background-pattern-circle2 {
         bottom: 15.625rem;
-        right: -1rem;
+        right: -6rem;
     }
 }
