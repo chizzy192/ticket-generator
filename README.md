@@ -39,13 +39,13 @@ Users should be able to:
 ![Desktop form with upload avatar, full name, email, and GitHub username fields](./public/screenshot-desktop-form.png)
 
 **Mobile Form Page**
-![Mobile responsive form layout](./public/screenshot-mobile-form.jpg)
+![Mobile responsive form layout](./public/screenshot-mobile-form.png)
 
 **Desktop Ticket Page**
-![Desktop conference ticket display with user details and ticket ID](./public/screenshot-desktop-ticket.jpg)
+![Desktop conference ticket display with user details and ticket ID](./public/screenshot-desktop-ticket.png)
 
 **Mobile Ticket Page**
-![Mobile responsive ticket display](./public/screenshot-mobile-ticket.jpg)
+![Mobile responsive ticket display](./public/screenshot-mobile-ticket.png)
 
 ### Links
 
