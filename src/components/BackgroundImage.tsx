@@ -7,13 +7,13 @@ function BackgroundImage({ children }: { children: React.ReactNode }) {
   return (
     <>
     
-    <div className='background-container'>
+    <div className='background-container' aria-hidden="true">
         <div className="background-image" />
         <div className="background-image-overlay" />
         
-        <img src={squigglyMobile} alt="Pattern Squiggly Line Bottom" className='pattern-squiggly-line-bottom-mobile'/>
-        <img src={squigglyDesktop} alt="Pattern Squiggly Line Bottom" className='pattern-squiggly-line-bottom-desktop'/>
-        <img src={squigglyLine} alt="Pattern Squiggly Line Top" className='pattern-squiggly-line-top'/>
+        <img src={squigglyMobile} alt="" className='pattern-squiggly-line-bottom-mobile'/>
+        <img src={squigglyDesktop} alt="" className='pattern-squiggly-line-bottom-desktop'/>
+        <img src={squigglyLine} alt="" className='pattern-squiggly-line-top'/>
     </div>
       {children}
     </>
