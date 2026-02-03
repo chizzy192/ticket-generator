@@ -1,6 +1,6 @@
 
 
-#drop-area {
+.drop-area {
   width: 100%;
   height: auto;
   display: block;
@@ -10,7 +10,7 @@
   
 }
 
-#img-view {
+.img-view {
   width: 100%;
   height: auto;
   border: dashed 0.1rem rgb(var(--neutral-700));
@@ -37,19 +37,19 @@
   backdrop-filter: blur(0.1rem);
 }
 
-#img-view p {
+.img-view p {
   margin: 0;
   font-size: 0.9rem;
   font-weight: 500;
 }
 
-#img-view:focus {
+.img-view:focus {
   outline: 0.125rem solid rgb(var(--neutral-700));
   transition: border 0.3s ease;
   outline-offset: 0.15625rem;
 }
 
-#img-view:hover {
+.img-view:hover {
   background-color: rgba(var(--neutral-700), 0.4);
 }
 
@@ -132,4 +132,11 @@ width: 0.625rem;
   width: 100%;
   height: 0.1rem;
   background-color: rgb(var(--neutral-500));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .img-view,
+  .img-buttons button {
+    transition: none;
+  }
 }

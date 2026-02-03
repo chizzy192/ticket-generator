@@ -117,15 +117,14 @@ gap: 0.3rem;
 
 p.ticket-code {
   position: absolute;
-  bottom: 0;
-  top: 50%;
-  bottom: 50%;
+  top: 46%;
   right: -1rem;
   font-size: 1.3rem;
   font-weight: 500;
   color: rgb(var(--neutral-500));
-  transform: rotate(90deg);
+  transform: translateY(-50%) rotate(90deg);
   line-height: 1;
+  margin: clamp(0.5rem, 2%, 1rem);
 }
 
 .background-pattern-circle-ticket, .background-pattern-circle2-ticket {
