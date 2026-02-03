@@ -46,7 +46,7 @@ function ImageInput() {
                 <h2>Upload Avatar</h2>
             </label>
             
-            <label htmlFor="input-file" id="drop-area" onDragOver={(e) => e.preventDefault()} onDrop={onDrop}>
+            <label htmlFor="input-file" className="drop-area" onDragOver={(e) => e.preventDefault()} onDrop={onDrop}>
                 <input 
                     type="file" 
                     accept="image/*" 
@@ -58,7 +58,7 @@ function ImageInput() {
                     aria-describedby="img-info"
                 />
                 
-                <div id="img-view">
+                <div className="img-view">
                     {!imagePreview ? (
                         /* INITIAL UPLOAD VIEW */
                         <>

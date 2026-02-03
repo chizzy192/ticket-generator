@@ -1,11 +1,11 @@
 /* 1. Ensure the container itself doesn't have a height of 0 */
 .background-container {
-  position: fixed;
+  position: absolute;
   inset: 0; /* Shorthand for top, bottom, left, right: 0 */
   z-index: -1;
   overflow: hidden;
   background-color: #0b0b14; /* Fallback color to match your neutral-900 */
-  height: auto; /* Ensure it takes up space */
+  min-height: 100vh; /* Ensure it takes up space */
 }
 
 .background-image {
