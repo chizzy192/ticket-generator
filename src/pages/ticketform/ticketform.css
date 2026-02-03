@@ -1,29 +1,15 @@
-.ticket-form-page {
-  
-}
-
-section {
-    display: flex;
-    flex-direction: column;
-    place-items: center center;
-    width: 100vw
-}
-
 form {
     display: flex;
     flex-direction: column;
     gap: clamp(1rem, 2%, 2.5rem);
-    width: 95%;
-    max-width: 40rem;
+    width: 100%;
 }
 
 button.submit-btn {
     width: 100%;
-    padding: 10px 12px;
-    background-image: linear-gradient(
-        to right, rgb(var(--orange-500)), rgb(var(--orange-700))
-    );
-    border-radius: 8px;
+    padding: 0.625rem 0.75rem;
+    background-color: rgb(var(--orange-700));
+    border-radius: 0.5rem;
     border: none;
     font: inherit;
     font-weight: 700;
@@ -34,31 +20,30 @@ button.submit-btn {
 
 button.submit-btn:hover {
     filter: brightness(1.1);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.25rem 0.75rem rgba(234, 88, 12, 0.3);
 }
 
 button.submit-btn:focus {
-    outline: 3px solid rgb(var(--orange-500));
-    outline-offset: 2px;
+    outline: 0.1875rem solid rgb(var(--orange-500));
+    outline-offset: 0.125rem;
 }
 
 .background-pattern-circle, .background-pattern-circle2 {
-    
-    width: 120px;
-    height: 120px;
+    width: 7.5rem;
+    height: 7.5rem;
     z-index: -1;
 }
 
 .background-pattern-circle {
-    top: -35px;
-    left: -20px;
+    top: -2.1875rem;
+    left: -1.25rem;
     position: fixed;
 }
 
 .background-pattern-circle2 {
-    bottom: 200px;
-    right: -60px;
+    bottom: 12.5rem;
+    right: -3.75rem;
     position: absolute;
 }
 
@@ -66,13 +51,13 @@ button.submit-btn:focus {
 
 @media (min-width: 40.625rem) {
         .background-pattern-circle, .background-pattern-circle2 {
-        width: 150px;
-        height: 150px;
+        width: 9.375rem;
+        height: 9.375rem;
     }
 
     .background-pattern-circle {
-        top: -60px;
-        left: 10px;
+        top: -3.75rem;
+        left: 0.625rem;
     }
 }
 
@@ -86,16 +71,16 @@ button.submit-btn:focus {
     }
 
     .background-pattern-circle, .background-pattern-circle2 {
-        width: 180px;
-        height: 180px;
+        width: 11.25rem;
+        height: 11.25rem;
     }
 
     .background-pattern-circle {
-        top: -90px;
-        left: 40px;
+        top: -5.625rem;
+        left: 2.5rem;
     }
     .background-pattern-circle2 {
-        bottom: 250px;
-        right: 70px;
+        bottom: 15.625rem;
+        right: -1rem;
     }
 }

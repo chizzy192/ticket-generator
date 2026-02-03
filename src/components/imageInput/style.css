@@ -1,135 +1,135 @@
 
 
 #drop-area {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-    text-align: center;
-    cursor: pointer;
-    
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  
 }
 
 #img-view {
-    width: 100%;
-    height: auto;
-    border: dashed 2px rgb(var(--neutral-700));
-    border-radius: 10px;
-    background-image:linear-gradient(
-        rgba(var(--neutral-700), 0.1)
-    ),
-     linear-gradient(to right, rgba(var(--neutral-700), 0.1) 90%, rgba(var(--orange-500), 0.05));
-    background-origin: border-box;
-    font: inherit;
-    font-size: 1rem;
-    color: rgb(var(--neutral-0));
-    background-color:rgba(var(--neutral-700), 0.1);
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;  
-    background-position: center;
-    background-size: cover;
-    padding: 0.8rem;
-    color: rgb(var(--neutral-300));
-    -webkit-backdrop-filter: blur(2px); 
-    backdrop-filter: blur(2px);
+  width: 100%;
+  height: auto;
+  border: dashed 0.1rem rgb(var(--neutral-700));
+  border-radius: 0.5rem;
+  background-image:linear-gradient(
+      rgba(var(--neutral-700), 0.1)
+  ),
+    linear-gradient(to right, rgba(var(--neutral-700), 0.1) 90%, rgba(var(--orange-500), 0.05));
+  background-origin: border-box;
+  font: inherit;
+  font-size: 1rem;
+  color: rgb(var(--neutral-0));
+  background-color:rgba(var(--neutral-700), 0.1);
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  background-position: center;
+  background-size: cover;
+  padding: 0.8rem;
+  color: rgb(var(--neutral-300));
+  -webkit-backdrop-filter: blur(0.1rem); 
+  backdrop-filter: blur(0.1rem);
 }
 
 #img-view p {
-    margin: 0;
-    font-size: 0.9rem;
-    font-weight: 500;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 #img-view:focus {
-    outline: 2px solid rgb(var(--neutral-700));
-    transition: border 0.3s ease;
-    outline-offset: 2.5px;
+  outline: 0.125rem solid rgb(var(--neutral-700));
+  transition: border 0.3s ease;
+  outline-offset: 0.15625rem;
 }
 
 #img-view:hover {
-    background-color: rgba(var(--neutral-700), 0.4);
+  background-color: rgba(var(--neutral-700), 0.4);
 }
 
 .upload-icon-div {
-    background-color: rgba(var(--neutral-700), 0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0.5rem;
-    width: 2.2rem;
-    height: 2.2rem;
-    outline: 1px solid rgb(var(--neutral-700));
+  background-color: rgba(var(--neutral-700), 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  outline: 0.1rem solid rgb(var(--neutral-700));
 }
 
 .avataricon {
-    background-color: rgba(var(--neutral-700), 0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0.5rem;
-    width: 2.7rem;
-    height: 2.7rem;
-    outline: 1px solid rgb(var(--neutral-700));
+  background-color: rgba(var(--neutral-700), 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  width: 2.7rem;
+  height: 2.7rem;
+  outline: 0.1rem solid rgb(var(--neutral-700));
 }
 
 .uploadicon {
-    width: 1.7rem;
-    height: 1.7rem;
+  width: 1.7rem;
+  height: 1.7rem;
 }
 
 .input-group .info {
-    margin: 0;
-    font-size: 0.6rem;
-    font-weight: 500;
-    color: rgb(var(--neutral-700));
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
+  margin: 0;
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: rgb(var(--neutral-700));
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .info svg {
-  width: 0.625rem;
+width: 0.625rem;
 }
 
 .img-buttons {
-    display: flex;
-    gap: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
 }
 
 .img-buttons button {
-    padding: 0.2rem;
-    border-radius: 5px;
-    border: none;
-    font: inherit;
-    font-weight: 700;
-    font-size: 0.8rem;
-    color: rgb(var(--neutral-500));
-    background-color: rgba(var(--neutral-700), 0.3);
-    cursor: pointer;
-    transition: all 0.2s ease;
+  padding: 0.2rem;
+  border-radius: 0.25rem;
+  border: none;
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: rgb(var(--neutral-500));
+  background-color: rgba(var(--neutral-700), 0.3);
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .img-buttons button:hover {
-    background-color: rgba(var(--neutral-700), 0.5);
-    color: rgb(var(--neutral-300));
+  background-color: rgba(var(--neutral-700), 0.5);
+  color: rgb(var(--neutral-300));
 }
 
 .img-buttons button:focus {
-    outline: 2px solid rgb(var(--orange-500));
-    outline-offset: 2px;
+  outline: 0.125rem solid rgb(var(--orange-500));
+  outline-offset: 0.125rem;
 }
 
 .img-buttons button:first-child {
-    display: flex;
-    flex-direction: column;
-    /* line-height: 1.2; */
+  display: flex;
+  flex-direction: column;
+  /* line-height: 1.2; */
 }
 
 .underline {
-    width: 100%;
-    height: 0.1rem;
-    background-color: rgb(var(--neutral-500));
+  width: 100%;
+  height: 0.1rem;
+  background-color: rgb(var(--neutral-500));
 }

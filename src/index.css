@@ -1,94 +1,84 @@
 @font-face {
-    font-family: "Inconsolata-bold";
-    src: url(./assets/fonts/static/Inconsolata-Bold.ttf);
+  font-family: "Inconsolata-bold";
+  src: url(./assets/fonts/static/Inconsolata-Bold.ttf);
 }
 
 @font-face {
-    font-family: "Inconsolata-extrabold";
-    src: url(./assets/fonts/static/Inconsolata-ExtraBold.ttf);
+  font-family: "Inconsolata-extrabold";
+  src: url(./assets/fonts/static/Inconsolata-ExtraBold.ttf);
 }
 
 @font-face {
-    font-family: "Inconsolata-medium";
-    src: url(./assets/fonts/static/Inconsolata-Medium.ttf);
+  font-family: "Inconsolata-medium";
+  src: url(./assets/fonts/static/Inconsolata-Medium.ttf);
 }
 
 @font-face {
-    font-family: "Inconsolata-regular";
-    src: url(./assets/fonts/static/Inconsolata-Regular.ttf);
+  font-family: "Inconsolata-regular";
+  src: url(./assets/fonts/static/Inconsolata-Regular.ttf);
 }
 
 @font-face {
-    font-family: "Inconsolata";
-    src: url(./assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
+  font-family: "Inconsolata";
+  src: url(./assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
 }
 
 :root {
-    line-height: 1.5;
-    font-family: 'Inconsolata', monospace;
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 1.25rem;
+  line-height: 1.5;
+  font-family: 'Inconsolata', monospace;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.25em;
 
-    --neutral-0: 255, 255, 255;
-    --neutral-300: 212, 212, 216;
-    --neutral-500: 148, 163, 184;
-    --neutral-700: 100, 116, 139;
-    --neutral-900: 15, 23, 42;
-    --orange-500: 251, 146, 60;
-    --orange-700: 234, 88, 12;
+  --neutral-0: 255, 255, 255;
+  --neutral-300: 212, 212, 216;
+  --neutral-500: 148, 163, 184;
+  --neutral-700: 100, 116, 139;
+  --neutral-900: 15, 23, 42;
+  --orange-500: 251, 146, 60;
+  --orange-700: 234, 88, 12;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-
-
 body {
-
   margin: 0;
   display: flex;
   flex-direction: column;
   place-items: center center;
-  min-width: 320px;
+  min-width: 16rem;
   min-height: 100vh;
 }
 
-/* @media (min-width: 40.625rem) {
-    body {
-        background-image: url(./assets/images/background-tablet.png);
-    }
+#root {
+  display: flex;
+  place-items: center center;
+  gap: 0;
+  flex-direction: column;
+  height: auto;
 }
 
-/* 64rem is equivalent to 1024px (assuming 1rem = 16px) 
-@media (min-width: 64rem) {
-    body {
-        background-image: url(./assets/images/background-desktop.png);
-    }
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(2rem, 5vh + 2rem, 6rem);
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
 }
- */
 
- #root {
-    display: flex;
-    place-items: center center;
-    gap: 0;
-    flex-direction: column;
-    height: auto;
- }
-
- main {
-    display: flex;
-    place-items: center center;
-    gap:clamp(1.5rem, 3%, 3rem);
-    flex-direction: column;
-    height: auto;
-    width: 100%;
-    position: relative;
-    overflow-x: hidden;
-    margin-bottom: clamp(6rem, 5%, 10rem);
- }
+section {
+  display: flex;
+  flex-direction: column;
+  place-items: center center;
+  width: clamp(17rem, 50%, 40rem);
+}

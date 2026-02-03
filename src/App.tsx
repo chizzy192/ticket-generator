@@ -8,11 +8,13 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 function App() {
   return (
     <BrowserRouter>
-        <BackgroundImage/>
-        <Routes>
-          <Route path="/" element={<TicketForm/>}/>
-          <Route path="/ticket" element={<TicketDesign/>}/>
-        </Routes>
+        <BackgroundImage>
+          <Routes>
+            <Route path="/" element={<TicketForm/>}/>
+            <Route path="/ticket" element={<TicketDesign/>}/>
+          </Routes>
+        </BackgroundImage>
+        
     </BrowserRouter>
   )
 }
