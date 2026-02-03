@@ -137,7 +137,7 @@ p.ticket-code {
 .background-pattern-circle-ticket {
   top: -2.1875rem;
   left: -1.25rem;
-  position: fixed;
+  position: absolute;
 }
 
 .background-pattern-circle2-ticket {
@@ -163,13 +163,13 @@ display: none;
 
   .background-pattern-circle-ticket {
       top: -5.625rem;
-      left: 2.5rem;
+      left: -15rem;
   }
   .background-pattern-circle3-ticket {
     position: absolute;
     display: block;
     top: 7%;
-    left: 71%;
+    left: 70%;
   }
 
   .background-pattern-circle2-ticket {
