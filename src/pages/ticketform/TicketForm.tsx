@@ -71,52 +71,49 @@ function TicketForm() {
     };
   
     return (
-    <main className='ticket-form-page'>
-      <img src={patternCircle} alt="Pattern Circle" className="background-pattern-circle"/>
-      <img src={patternCircle} alt="Pattern Circle" className="background-pattern-circle2"/>
-      
-          
-      <section>
+      <>
         <Header>
           <HeaderText/>
         </Header>
-      </section>
+        <main className='ticket-form-page'>
+          <img src={patternCircle} alt="Pattern Circle" className="background-pattern-circle2"/>
 
-      <section>
-        <form action="" onSubmit={handleSubmit}>
-          <ImageInput/>
-          <FormInput 
-            name="fullName" 
-            type="text" 
-            placeholder='' 
-            onChange={(e) => updateField('fullName', e.target.value.trim())}
-          >
-            Full Name
-          </FormInput>
+          <section>
+            <form action="" onSubmit={handleSubmit}>
+              <ImageInput/>
+              <FormInput 
+                name="fullName" 
+                type="text" 
+                placeholder='' 
+                onChange={(e) => updateField('fullName', e.target.value.trim())}
+              >
+                Full Name
+              </FormInput>
 
-          <FormInput 
-            name="email" 
-            type="email" 
-            placeholder='example@gmail.com' 
-            onChange={(e) => {updateField('email', e.target.value); setEmailError('');}} 
-            error={emailError}
-          >
-            Email Address
-          </FormInput>
-          <FormInput 
-            type='text' 
-            name="githubUsername" 
-            placeholder='@yourusername' 
-            onChange={(e) => updateField('githubUsername', e.target.value)}
-          >
-            GitHub UserName
-          </FormInput>
-          <button type='submit' className='submit-btn'>
-            Generate My Ticket
-          </button>
-        </form>
-      </section>
-    </main>
+              <FormInput 
+                name="email" 
+                type="email" 
+                placeholder='example@gmail.com' 
+                onChange={(e) => {updateField('email', e.target.value); setEmailError('');}} 
+                error={emailError}
+              >
+                Email Address
+              </FormInput>
+              <FormInput 
+                type='text' 
+                name="githubUsername" 
+                placeholder='@yourusername' 
+                onChange={(e) => updateField('githubUsername', e.target.value)}
+              >
+                GitHub UserName
+              </FormInput>
+              <button type='submit' className='submit-btn'>
+                Generate My Ticket
+              </button>
+            </form>
+          </section>
+        </main>
+      </>
     )
 }
 

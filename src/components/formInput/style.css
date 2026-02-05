@@ -32,7 +32,15 @@ input:focus {
 }
 
 input[aria-invalid="true"] {
-  border: 0.1rem solid rgb(var(--orange-500));
+  border: 0.1rem solid rgb(var(--orange-700));
+}
+
+input[aria-invalid="true"]:focus {
+  border: 0.1rem solid rgb(var(--orange-700));
+  padding: 0.625rem 0.875rem;
+  transition: border 0.3s ease, opacity 0.3s ease;
+  outline-offset: 0.15625rem;
+  outline: 0.125rem solid rgb(var(--orange-700));
 }
 
 input:hover {

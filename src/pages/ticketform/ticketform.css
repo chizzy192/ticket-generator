@@ -3,6 +3,7 @@ form {
     flex-direction: column;
     gap: clamp(1rem, 2%, 2.5rem);
     width: 100%;
+    margin-bottom: 0.5rem;
 }
 
 button.submit-btn {
@@ -27,60 +28,4 @@ button.submit-btn:hover {
 button.submit-btn:focus {
     outline: 0.1875rem solid rgb(var(--orange-500));
     outline-offset: 0.125rem;
-}
-
-.background-pattern-circle, .background-pattern-circle2 {
-    width: 7.5rem;
-    height: 7.5rem;
-}
-
-.background-pattern-circle {
-    top: -2.1875rem;
-    left: -1.25rem;
-    position: absolute;
-    z-index: 10;
-}
-
-.background-pattern-circle2 {
-    bottom: 12.5rem;
-    right: -3.75rem;
-    position: absolute;
-}
-
-
-
-@media (min-width: 40.625rem) {
-        .background-pattern-circle, .background-pattern-circle2 {
-        width: 9.375rem;
-        height: 9.375rem;
-    }
-
-    .background-pattern-circle {
-        top: -3.75rem;
-        left: 0.625rem;
-    }
-}
-
-@media (min-width: 64rem) {
-    section {
-        width: 70%;
-    }
-
-    form {
-        width: 70%;
-    }
-
-    .background-pattern-circle, .background-pattern-circle2 {
-        width: 11.25rem;
-        height: 11.25rem;
-    }
-
-    .background-pattern-circle {
-        top: -5.625rem;
-        left: -15rem;
-    }
-    .background-pattern-circle2 {
-        bottom: 15.625rem;
-        right: -6rem;
-    }
 }

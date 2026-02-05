@@ -1,5 +1,4 @@
 
-import BackgroundImage from "./components/BackgroundImage"
 import TicketDesign from "./pages/ticketdesign/TicketDesign"
 import TicketForm from "./pages/ticketform/TicketForm"
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
@@ -7,14 +6,11 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
 function App() {
   return (
-    <BrowserRouter>
-        <BackgroundImage>
+    <BrowserRouter>   
           <Routes>
             <Route path="/" element={<TicketForm/>}/>
             <Route path="/ticket" element={<TicketDesign/>}/>
           </Routes>
-        </BackgroundImage>
-        
     </BrowserRouter>
   )
 }
