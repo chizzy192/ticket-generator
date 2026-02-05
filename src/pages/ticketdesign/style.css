@@ -1,11 +1,15 @@
+.ticket-design-page {
+  margin: clamp(2rem, 5%, 6rem) 0 0;
+}
+
 .ticket-section {
-position: relative;
+  width: auto;
 }
 
 .ticket-container {
 position: relative;
-width: clamp(18rem, 70%, 21rem); 
-height: clamp(18rem, 70%, 21rem);
+width: clamp(17.5rem, 23vw + 10rem, 30rem); 
+/* height: clamp(18rem, 1vh + 2rem, 29rem); */
 aspect-ratio: 2 / 1; /* Adjust this to match your SVG's shape (e.g., 2.5 / 1) */
 display: flex;
 filter: drop-shadow(0 0 0.1rem rgba(255, 255, 255, 0.2));
@@ -30,7 +34,7 @@ backdrop-filter: blur(2.5rem);
 
 /* 3. Corrected Gradients for the Design */
 background-image: 
-  linear-gradient(to left, rgba(var(--orange-500), 0.8), transparent 50%),
+  linear-gradient(to left, rgba(var(--orange-700), 0.5), transparent 50%),
   linear-gradient(135deg, rgba(var(--neutral-0), 0.9), rgba(var(--neutral-0), 0.9));
 border-radius: inherit; /* Helps the border match the mask if possible */
 }
@@ -39,48 +43,49 @@ border-radius: inherit; /* Helps the border match the mask if possible */
 position: absolute;
 display: flex;
 gap: 0.7rem;
-align-self: start;
+align-items: start;
 justify-content: flex-start;
-top: 1.2rem;
-left: 1rem;
+top: clamp(1.2rem, 1vw + 1rem, 3rem);
+left: clamp(1rem, 1vw + 0.7rem, 2.7rem);
 }
 
 .avatar {
 position:absolute;
 display: flex;
 gap: 0.7rem;
-align-self: start;
+align-items: center;
 justify-content: flex-start;
-bottom: 1.2rem;
-left: 1rem;
+bottom: clamp(1.2rem, 1vw + 1rem, 3rem);
+left: clamp(1rem, 1vw + 0.7rem, 2.7rem);
 }
 
 .avatar img {
-width: 2.4rem;
-height: 2.4rem;
+width: clamp(2.4rem, 6vw + 0.6rem, 4rem);
+height: clamp(2.4rem, 6vw + 0.6rem, 4rem);
 border-radius: 0.375rem;
 }
 
 .avatar h2 {
-font-size: 1.25rem;
+font-size: clamp(1.25rem, 2vw, 1.5rem);
 font-weight: 400;
 font-style: normal;
-color: rgb(var(--neutral-0));
+color: rgb(var(--neutral-300));
 line-height: 0.8;
 }
 
 .avatar p img {
-width: 0.7rem;
-height: 0.7rem;
+width: clamp(0.7rem, 1vw, 0.8rem);
+height: clamp(0.7rem, 1vw, 0.8rem);
 }
 
 .avatar p {
-font-size: 0.7rem;
-font-weight: 400;
+font-size: clamp(0.7rem, 1vw, 0.8rem);
+font-weight: 300;
 color: rgb(var(--neutral-300));
 display: flex;
 align-items: center;
 gap: 0.2rem;
+opacity: 0.9;
 
 }
 
@@ -91,19 +96,19 @@ gap: 0.3rem;
 }
 
 .logo img {
-  width: 1.4rem;
-  height: 1.4rem;
+  width: clamp(1.4rem, 3vw, 1.7rem);
+  height: clamp(1.4rem, 3vw, 1.7rem);
 }
 
 .logo h2 {
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 2vw + 0.5rem, 1.7rem);
   font-weight: 700;
   color: rgb(var(--neutral-0));
   line-height: 0.8;
 }
 
 .logo .ticket-date {
-  font-size: 0.6rem;
+  font-size: clamp(0.7rem, 1vw, 0.8rem);
   font-weight: 400;
   color: rgb(var(--neutral-300));
   line-height: 1;
@@ -112,7 +117,7 @@ gap: 0.3rem;
 .logo figcaption {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: clamp(0.6rem, 1vw + 0.2rem, 0.8rem);
 }
 
 p.ticket-code {
@@ -124,54 +129,16 @@ p.ticket-code {
   color: rgb(var(--neutral-500));
   transform: translateY(-50%) rotate(90deg);
   line-height: 1;
-  margin: clamp(0.5rem, 2%, 1rem);
-}
-
-.background-pattern-circle-ticket, .background-pattern-circle2-ticket {
-  width: 7.5rem;
-  height: 7.5rem;
-  z-index: -1;
-}
-
-.background-pattern-circle-ticket {
-  top: -2.1875rem;
-  left: -1.25rem;
-  position: absolute;
-}
-
-.background-pattern-circle2-ticket {
-  top: 80%;
-  right: -3.75rem;
-  position: absolute;
-}
-
-.background-pattern-circle3-ticket {
-display: none;
+  margin: clamp(0.5rem, 2%, 1rem) clamp(1rem, 1vw + 0.7rem, 2.7rem);
+  opacity: 0.5;
 }
 
 @media (min-width: 64rem) {
+  .ticket-design-page {
+    width: clamp(17.5rem, 23vw + 20rem, 40rem);
+  }
   .ticket {
       width: 65%;
       height: auto;
-  }
-
-  .background-pattern-circle-ticket, .background-pattern-circle3-ticket {
-      width: 9rem;
-      height: 9rem;
-  }
-
-  .background-pattern-circle-ticket {
-      top: -5.625rem;
-      left: -15rem;
-  }
-  .background-pattern-circle3-ticket {
-    position: absolute;
-    display: block;
-    top: 7%;
-    left: 70%;
-  }
-
-  .background-pattern-circle2-ticket {
-      display: none;
   }
 }

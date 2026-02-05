@@ -14,7 +14,11 @@ const defaultAvatar = avatar;
 function HeaderText({fullName = 'Jonatan Krisof', email = 'jonatan@example.com'}: {fullName?: string, email?: string}) {
     return <div className='headerText header-ticket'>
         <h1>
-             Congrats, <span className='colored-text'>{fullName+'!'}</span> Your ticket is ready.
+             Congrats, <span className='colored-text'>{fullName+'!'}</span> 
+             <div>
+              Your ticket is ready.
+             </div>
+             
         </h1>
         <p className='header-p p-ticket'>
             We've emailed your ticket to <span className='colored-email'>{email}</span> and will send updates in the run up to the event.
@@ -45,44 +49,43 @@ function TicketDesign() {
     }, [avatar]);
     
   return (
-    <main className='ticket-design-page'>
-        <img src={patternCircle} alt="Pattern Circle" className="background-pattern-circle-ticket"/>
-        <img src={patternCircle} alt="Pattern Circle" className="background-pattern-circle2-ticket"/>
+    <>
+      <Header>
+        <HeaderText fullName={useFormStore((state) => state.fullName)} email={useFormStore((state) => state.email)}/>
+      </Header>
+      <main className='ticket-design-page'>
+          <img src={patternCircle} alt="Pattern Circle" className="background-pattern-circle2-ticket"/>
+              
+          <section className='ticket-section'>
 
-        <section>
-            <Header>
-                <HeaderText fullName={useFormStore((state) => state.fullName)} email={useFormStore((state) => state.email)}/>
-            </Header>
-        </section>
-        <section className='ticket-section'>
+            <div className='ticket-container'>
+              {/* 1. The Background Layer */}
+              <div className='ticket-img'></div>
 
-          <div className='ticket-container'>
-            {/* 1. The Background Layer */}
-            <div className='ticket-img'></div>
+              {/* 2. The Content Layers */}
+              <figure className='avatar'>
+                <img src={previewUrl} alt="Avatar" />
+                <figcaption>
+                    <h2>{useFormStore((state) => state.fullName)}</h2>
+                    <p><img src={githubicon} alt="Github" /> {useFormStore((state) => state.githubUsername)}</p>
+                </figcaption>
+              </figure>
 
-            {/* 2. The Content Layers */}
-            <figure className='avatar'>
-              <img src={previewUrl} alt="Avatar" />
-              <figcaption>
-                  <h2>{useFormStore((state) => state.fullName)}</h2>
-                  <p><img src={githubicon} alt="Github" /> {useFormStore((state) => state.githubUsername)}</p>
-              </figcaption>
-            </figure>
+              <figure className='logo'>
+                <img src={logo} alt="Logo" />
+                <figcaption>
+                    <h2>Coding Conf</h2>
+                    <p className='ticket-date'>Jan 31, 2025 &nbsp;/ &nbsp;Austin, TX</p>
+                </figcaption>
+              </figure>
 
-            <figure className='logo'>
-              <img src={logo} alt="Logo" />
-              <figcaption>
-                  <h2>Coding Conf</h2>
-                  <p className='ticket-date'>Jan 31, 2025 / Austin, TX</p>
-              </figcaption>
-            </figure>
-
-            <p className='ticket-code'>{useFormStore((state) => state.id || '#06009')}</p>
-          </div>
-            
-            <img src={patternCircle} alt="Pattern Circle" className="background-pattern-circle3-ticket"/>
-        </section>
-    </main>
+              <p className='ticket-code'>{useFormStore((state) => state.id || '#06009')}</p>
+            </div>
+              
+              {/* <img src={patternCircle} alt="Pattern Circle" className="background-pattern-circle3-ticket"/> */}
+          </section>
+      </main>
+    </>
   )
 }
 

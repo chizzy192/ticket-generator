@@ -30,7 +30,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 1.25em;
+  font-size: clamp(1.25em, 4vw, 1.5em); /* Base font size between 20px and 24px */
 
   --neutral-0: 255, 255, 255;
   --neutral-300: 212, 212, 216;
@@ -48,12 +48,19 @@
 }
 
 body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  place-items: center center;
-  min-width: 16rem;
+  min-width: 100%;
   min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  padding: clamp(2rem, 3%, 3rem) 0 clamp(3.5rem, 5% + 2rem, 5rem);
+  background-color: #0b0b14; /* Fallback color to match your neutral-900 */
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: cover, 6rem, 18rem,cover;
+  background-position: center, right top 1.5rem, left bottom, center;
+  /* Removed min-height and object-fit as they don't apply to divs */
+  background-image:url(../public/pattern-lines.svg), url(../public//pattern-squiggly-line-top.svg), url(../public/pattern-squiggly-line-bottom-mobile-tablet.svg), url(../public/background-mobile.png);
+  pointer-events: none;
+  
 }
 
 #root {
@@ -61,24 +68,114 @@ body {
   place-items: center center;
   gap: 0;
   flex-direction: column;
-  height: auto;
+  width: 100%;
+  min-height: 50vh;
+  gap: clamp(2rem, 1vh + 1.5rem, 4rem);
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(2rem, 5vh + 2rem, 6rem);
-  flex-direction: column;
-  height: 100vh;
   width: 100%;
+  min-height: 50vh;
   position: relative;
-  
+  z-index: 1;
+  background-color: transparent;
+  overflow: hidden;
 }
 
 section {
   display: flex;
   flex-direction: column;
   place-items: center center;
-  width: clamp(17rem, 50%, 40rem);
+  width: clamp(17.5rem, 50%, 40rem);
+  position: relative;
+  z-index: 1;
+  pointer-events: all;
+}
+
+.background-pattern-circle {
+    width: 5.5rem;
+    height: 5.5rem;
+    position: absolute;
+    top: -1.7rem;
+    left: -1rem;
+    z-index: -1;
+}
+
+.background-pattern-circle2, .background-pattern-circle2-ticket {
+    width: 5.5rem;
+    height: 5.5rem;
+    position: absolute;
+    z-index: -1;
+    right: -2.3rem;
+}
+
+.background-pattern-circle2-ticket {
+  bottom: 5rem;
+}
+
+.background-pattern-circle2 {
+  bottom: 11rem;
+}
+@media (min-width: 40.625rem) {
+  body {
+      background-image:url(../public/pattern-lines.svg), url(../public/pattern-squiggly-line-top.svg), url(../public/pattern-squiggly-line-bottom-mobile-tablet.svg), url(../public/background-mobile.png);
+  }
+  .pattern-squiggly-line-bottom-mobile {
+      width: 18rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  body {
+      background-image:url(../public/pattern-lines.svg), url(../public/pattern-squiggly-line-top.svg), url(../public/pattern-squiggly-line-bottom-desktop.svg), url(../public/background-mobile.png);
+      background-size: cover, 16rem, 34rem, cover;
+    background-position: center, right top 3rem, left bottom, center;
+      width: 100%;
+      height: 100%;
+  }
+
+  main {
+    min-height: 1vh;
+  }
+  .background-pattern-circle, .background-pattern-circle2, .background-pattern-circle2-ticket {
+    width: 8rem;
+    height: 8rem;
+  }
+  .background-pattern-circle {
+      top: -4rem;
+      left: 2rem;
+  }
+
+  section {
+    width: 40%;
+  }
+
+  .background-pattern-circle2 { 
+    bottom: 12rem;
+    right: 4.5rem;
+  }
+
+  .background-pattern-circle2-ticket {
+    right: 0rem;
+    top: 2rem;
+  }
+}
+
+@media (min-width: 100rem) {
+  section {
+      width: 32%;
+  }
+
+  .background-pattern-circle2 { 
+    bottom: 12rem;
+    right: 12rem;
+  }
+
+  .background-pattern-circle2-ticket {
+    top: 3.5rem;
+  }
+
 }
