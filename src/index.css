@@ -54,11 +54,11 @@ body {
   overflow-x: hidden;
   padding: clamp(2rem, 3%, 3rem) 0 clamp(3.5rem, 5% + 2rem, 5rem);
   background-color: #0b0b14; /* Fallback color to match your neutral-900 */
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-  background-size: cover, 6rem, 18rem,cover;
-  background-position: center, right top 1.5rem, left bottom, center;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 5.5rem, cover, 6rem, 18rem,cover;
+  background-position: top -1.7rem left -1rem, center, right top 1.5rem, left bottom, center;
   /* Removed min-height and object-fit as they don't apply to divs */
-  background-image:url(../public/pattern-lines.svg), url(../public//pattern-squiggly-line-top.svg), url(../public/pattern-squiggly-line-bottom-mobile-tablet.svg), url(../public/background-mobile.png);
+  background-image:url(../public/pattern-circle.svg), url(../public/pattern-lines.svg), url(../public//pattern-squiggly-line-top.svg), url(../public/pattern-squiggly-line-bottom-mobile-tablet.svg), url(../public/background-mobile.png);
   pointer-events: none;
   
 }
@@ -95,15 +95,6 @@ section {
   pointer-events: all;
 }
 
-.background-pattern-circle {
-    width: 5.5rem;
-    height: 5.5rem;
-    position: absolute;
-    top: -1.7rem;
-    left: -1rem;
-    z-index: -1;
-}
-
 .background-pattern-circle2, .background-pattern-circle2-ticket {
     width: 5.5rem;
     height: 5.5rem;
@@ -121,7 +112,7 @@ section {
 }
 @media (min-width: 40.625rem) {
   body {
-      background-image:url(../public/pattern-lines.svg), url(../public/pattern-squiggly-line-top.svg), url(../public/pattern-squiggly-line-bottom-mobile-tablet.svg), url(../public/background-mobile.png);
+      background-image:url(../public/pattern-circle.svg), url(../public/pattern-lines.svg), url(../public/pattern-squiggly-line-top.svg), url(../public/pattern-squiggly-line-bottom-mobile-tablet.svg), url(../public/background-mobile.png);
   }
   .pattern-squiggly-line-bottom-mobile {
       width: 18rem;
@@ -130,9 +121,9 @@ section {
 
 @media (min-width: 64rem) {
   body {
-      background-image:url(../public/pattern-lines.svg), url(../public/pattern-squiggly-line-top.svg), url(../public/pattern-squiggly-line-bottom-desktop.svg), url(../public/background-mobile.png);
-      background-size: cover, 16rem, 34rem, cover;
-    background-position: center, right top 3rem, left bottom, center;
+      background-image:url(../public/pattern-circle.svg), url(../public/pattern-lines.svg), url(../public/pattern-squiggly-line-top.svg), url(../public/pattern-squiggly-line-bottom-desktop.svg), url(../public/background-mobile.png);
+      background-size: 8rem, cover, 16rem, 34rem, cover;
+      background-position:top -4rem left 2rem, center, right top 3rem, left bottom, center;
       width: 100%;
       height: 100%;
   }
@@ -140,13 +131,9 @@ section {
   main {
     min-height: 1vh;
   }
-  .background-pattern-circle, .background-pattern-circle2, .background-pattern-circle2-ticket {
+  .background-pattern-circle2, .background-pattern-circle2-ticket {
     width: 8rem;
     height: 8rem;
-  }
-  .background-pattern-circle {
-      top: -4rem;
-      left: 2rem;
   }
 
   section {
